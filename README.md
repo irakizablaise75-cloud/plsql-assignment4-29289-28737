@@ -242,25 +242,8 @@ The repository contains screenshot evidence showing the execution of each requir
   <img src="screenshots/E.png" alt="Error case summary" width="900" />
 </div>
 
-## 10. Group Work and Presentation Requirements
-This assignment is completed by exactly two students. Both students must contribute to the design, implementation, testing, and final presentation. During the presentation, each student should be able to explain the application logic, the database structure, and the major PL/SQL concepts used.
-
-## 11. Final Checklist
-- [x] Group members' names and student IDs filled in
-- [x] Repository renamed correctly
-- [ ] Database schema created successfully
-- [ ] Sample data inserted correctly
-- [ ] Records and collections implemented
-- [ ] Implicit and explicit cursors demonstrated
-- [ ] `BULK COLLECT` and `FORALL` used properly
-- [ ] Procedures and functions implemented
-- [ ] Exception handling included throughout
-- [ ] Test scripts for success and error scenarios completed
-- [x] Screenshots captured and stored in `screenshots/`
-- [ ] Documentation reviewed and presentation prepared
-
-## 12. AI Assistance Disclosure
+## 10. AI Assistance Disclosure
 An AI assistant was used to help draft and organize parts of the PL/SQL scripts and documentation. All group members reviewed the final implementation and confirmed that the code, explanations, and screenshots are accurate and suitable for assessment.
 
-## 13. Additional Notes
+## 11. Additional Notes
 This assignment is intended to demonstrate both theoretical understanding and practical implementation of Oracle PL/SQL. The central objective is not only to produce working code, but to show that the group can design, validate, and explain a realistic database solution using advanced PL/SQL features in a professional and academically sound manner.
