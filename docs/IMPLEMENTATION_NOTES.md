@@ -17,9 +17,9 @@ hiring, salary raises, transfers, deletion, and reporting.
 | Explicit cursor | `prc_raise_salary_by_dept.sql`, `fn_dept_total_salary.sql` | `OPEN`/`FETCH`/`CLOSE` (with `BULK COLLECT` in the function) |
 | BULK COLLECT | `prc_bulk_adjust_salaries.sql`, `prc_dept_roster_report.sql`, `fn_dept_total_salary.sql` | load many rows in one round trip |
 | FORALL | `prc_bulk_adjust_salaries.sql` | bulk UPDATE with `SAVE EXCEPTIONS` |
-| Stored procedures | `01_procedures/` | 6 procedures with IN/OUT params |
+| Stored procedures | `01_procedures/` | 6 procedures using IN and OUT parameters |
 | Functions | `02_functions/` | 4 functions returning scalar values |
-| Predefined exceptions | functions + `test_error_cases.sql` | `NO_DATA_FOUND`, `TOO_MANY_ROWS`, `DUP_VAL_ON_INDEX` |
+| Predefined exceptions | functions, `prc_hire_employee.sql`, `test_error_cases.sql` | `NO_DATA_FOUND`, `TOO_MANY_ROWS`, `DUP_VAL_ON_INDEX` |
 | User-defined exceptions | `fn_dept_total_salary.sql`, `prc_raise_salary_by_dept.sql` | `ex_empty_dept`, `ex_bad_pct` |
 | `RAISE_APPLICATION_ERROR` | every procedure/function | codes -20010 .. -20071 |
 
@@ -47,6 +47,22 @@ hiring, salary raises, transfers, deletion, and reporting.
 | -20062 | `prc_transfer_employee` | Other transfer failure |
 | -20070 | `prc_delete_employee` | Employee not found |
 | -20071 | `prc_delete_employee` | Other delete failure |
+
+## File inventory (matches the scripts in this repository)
+| File | Object | What it does |
+|---|---|---|
+| `00_schema/01_create_tables.sql` | tables + sequence | Creates `departments`, `employees`, `salary_audit`, `seq_salary_audit`, indexes, and constraints |
+| `00_schema/02_insert_sample_data.sql` | sample rows | Inserts 4 departments and 8 employees (IDs 1001-1008) |
+| `01_procedures/prc_hire_employee.sql` | `prc_hire_employee` | Inserts one employee from a user-defined record; returns `p_rows_added` |
+| `01_procedures/prc_raise_salary_by_dept.sql` | `prc_raise_salary_by_dept` | Raises all salaries in a department with an explicit cursor; writes `salary_audit`; returns `p_updated` |
+| `01_procedures/prc_bulk_adjust_salaries.sql` | `prc_bulk_adjust_salaries` | `BULK COLLECT` + capped raise + `FORALL ... SAVE EXCEPTIONS`; returns `p_updated` |
+| `01_procedures/prc_dept_roster_report.sql` | `prc_dept_roster_report` | Prints a department roster using a nested table of `employees%ROWTYPE` |
+| `01_procedures/prc_transfer_employee.sql` | `prc_transfer_employee` | Validates the target department, then moves the employee |
+| `01_procedures/prc_delete_employee.sql` | `prc_delete_employee` | Deletes the employee's audit rows, then the employee; returns `p_deleted` and `p_audit_deleted` |
+| `02_functions/fn_get_annual_salary.sql` | `fn_get_annual_salary` | Returns monthly salary x 12 |
+| `02_functions/fn_years_of_service.sql` | `fn_years_of_service` | Returns whole years from `hire_date` to `SYSDATE` |
+| `02_functions/fn_dept_total_salary.sql` | `fn_dept_total_salary` | Returns the department's total salary using an explicit cursor and `BULK COLLECT` |
+| `02_functions/fn_find_employee_by_name.sql` | `fn_find_employee_by_name` | Returns the `emp_id` for a unique last name |
 
 ## Test coverage
 | Test | Concept exercised |
