@@ -11,7 +11,7 @@
 | _Student 1 Full Name_ | _Student ID 1_ |
 | _Student 2 Full Name_ | _Student ID 2_ |
 
-> Before final submission, update the table above and rename the repository to `plsql-assignment4-<studentID1>-<studentID2>`.
+> Update the table above and ensure the repository name follows the required format: `plsql-assignment4-<studentID1>-<studentID2>`.
 
 ## 1. Application Description and Requirements
 This project implements an employee management system in Oracle PL/SQL. The application supports a realistic business case in which a company maintains departments, employees, and salary-change information. The system allows administrators to hire employees, apply salary adjustments, transfer employees between departments, delete employees, and generate department-level reports.
@@ -166,26 +166,28 @@ The repository contains screenshot evidence showing the execution of each requir
 
 ### Success case screenshots
 
+> Screenshot evidence is stored in the `screenshots/` folder and matches the test scripts in `03_tests/`.
+
 <div align="center">
   <table>
     <tr>
-      <td><img src="T1.png" alt="T1 success case" width="420" /></td>
-      <td><img src="T2.png" alt="T2 success case" width="420" /></td>
+      <td><img src="screenshots/T1.png" alt="T1 success case" width="420" /></td>
+      <td><img src="screenshots/T2.png" alt="T2 success case" width="420" /></td>
     </tr>
     <tr>
-      <td><img src="T3.png" alt="T3 success case" width="420" /></td>
-      <td><img src="T4.png" alt="T4 success case" width="420" /></td>
+      <td><img src="screenshots/T3.png" alt="T3 success case" width="420" /></td>
+      <td><img src="screenshots/T4.png" alt="T4 success case" width="420" /></td>
     </tr>
     <tr>
-      <td><img src="T5.png" alt="T5 success case" width="420" /></td>
-      <td><img src="T6.png" alt="T6 success case" width="420" /></td>
+      <td><img src="screenshots/T5.png" alt="T5 success case" width="420" /></td>
+      <td><img src="screenshots/T6.png" alt="T6 success case" width="420" /></td>
     </tr>
     <tr>
-      <td><img src="T7.png" alt="T7 success case" width="420" /></td>
-      <td><img src="T8.png" alt="T8 success case" width="420" /></td>
+      <td><img src="screenshots/T7.png" alt="T7 success case" width="420" /></td>
+      <td><img src="screenshots/T8.png" alt="T8 success case" width="420" /></td>
     </tr>
     <tr>
-      <td colspan="2" align="center"><img src="T9.png" alt="T9 success case" width="420" /></td>
+      <td colspan="2" align="center"><img src="screenshots/T9.png" alt="T9 success case" width="420" /></td>
     </tr>
   </table>
 </div>
@@ -193,7 +195,7 @@ The repository contains screenshot evidence showing the execution of each requir
 ### Error case screenshot
 
 <div align="center">
-  <img src="E.png" alt="Error case summary" width="900" />
+  <img src="screenshots/E.png" alt="Error case summary" width="900" />
 </div>
 
 ## 10. Group Work and Presentation Requirements

@@ -1,6 +1,6 @@
 # Screenshot Capture Guide
 
-This assignment requires one image per test case to demonstrate that the SQL scripts were executed successfully and produced the expected output. The repository currently stores the captured screenshots as `T1.png` to `T9.png` and `E.png` in the project root, which is acceptable for submission and review.
+This assignment requires one image per test case to demonstrate that the SQL scripts were executed successfully and produced the expected output. The repository stores the captured screenshots in the `screenshots/` folder as `T1.png` to `T9.png` and `E.png`, which matches the repository structure required by the assignment and keeps the project organized for presentation.
 
 ## Required Output Evidence
 The screenshots should clearly show:
