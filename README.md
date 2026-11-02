@@ -39,12 +39,13 @@ The database includes the following main tables:
 - **departments**
   - `dept_id` (PRIMARY KEY)
   - `dept_name` (UNIQUE, NOT NULL)
-  - `location` (NOT NULL)
+  - `location` (DEFAULT `'Kigali'`)
 
 - **employees**
   - `emp_id` (PRIMARY KEY)
-  - `first_name`, `last_name`, `email`
-  - `hire_date`, `job_title`, `salary`
+  - `first_name`, `last_name` (NOT NULL)
+  - `email` (UNIQUE)
+  - `hire_date` (DEFAULT `SYSDATE`), `job_title`, `salary`
   - `dept_id` (FOREIGN KEY to `departments`)
   - `salary` must be greater than zero
 
@@ -65,7 +66,7 @@ This project directly addresses each requirement of the assignment:
 | Records | User-defined records and `%ROWTYPE` are used in procedures and functions | `prc_hire_employee`, `prc_raise_salary_by_dept`, `prc_dept_roster_report` |
 | Collections | Associative arrays and nested tables are used to store multiple values or records | `prc_bulk_adjust_salaries`, `fn_dept_total_salary`, `prc_dept_roster_report` |
 | Implicit Cursors | `INSERT`, `UPDATE`, and `DELETE` statements use `SQL%ROWCOUNT`, `SQL%FOUND`, and `SQL%NOTFOUND` | `prc_hire_employee`, `prc_transfer_employee`, `prc_delete_employee` |
-| Explicit Cursors | `OPEN`, `FETCH`, `CLOSE`, and cursor `FOR` loops are used for row processing | `prc_raise_salary_by_dept`, `fn_dept_total_salary` |
+| Explicit Cursors | `OPEN`, `FETCH`, and `CLOSE` loops are used for row processing | `prc_raise_salary_by_dept`, `fn_dept_total_salary` |
 | Bulk Processing | `BULK COLLECT` and `FORALL` are used for efficient multi-row operations | `prc_bulk_adjust_salaries` |
 | Stored Procedures | Meaningful procedures with input/output parameters are implemented | `01_procedures/*.sql` |
 | Functions | Functions return meaningful business results and are called from SQL/PL/SQL | `02_functions/*.sql` |
