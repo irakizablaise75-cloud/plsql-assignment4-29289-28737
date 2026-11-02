@@ -8,10 +8,10 @@
 ## Group Members
 | Full Name | Student ID |
 |---|---|
-| _Student 1 Full Name_ | _Student ID 1_ |
-| _Student 2 Full Name_ | _Student ID 2_ |
+| Irakiza Blaise | 29289 |
+| Ishimwe Zacharie | 28737 |
 
-> Update the table above and ensure the repository name follows the required format: `plsql-assignment4-<studentID1>-<studentID2>`.
+> Repository name follows the required format: `plsql-assignment4-29289-28737`.
 
 ## 1. Application Description and Requirements
 This project implements an employee management system in Oracle PL/SQL. The application supports a realistic business case in which a company maintains departments, employees, and salary-change information. The system allows administrators to hire employees, apply salary adjustments, transfer employees between departments, delete employees, and generate department-level reports.
@@ -168,6 +168,18 @@ The repository contains screenshot evidence showing the execution of each requir
 
 > Screenshot evidence is stored in the `screenshots/` folder and matches the test scripts in `03_tests/`.
 
+| Screenshot | Test | What it demonstrates |
+|---|---|---|
+| `T1.png` | `fn_get_annual_salary` | Monthly salary and calculated annual salary |
+| `T2.png` | Years of service + department total | Years worked and total department salary |
+| `T3.png` | Employee lookup by name | Correct employee record returned |
+| `T4.png` | Hire employee | New employee inserted and rows added |
+| `T5.png` | Department raise + audit | Updated salaries and audit records |
+| `T6.png` | Bulk adjustment | Bulk update message and affected row count |
+| `T7.png` | Department roster report | Roster list and total employee count |
+| `T8.png` | Transfer employee | Employee moved to the new department |
+| `T9.png` | Delete employee | Deletion message and remaining count |
+
 <div align="center">
   <table>
     <tr>
@@ -194,6 +206,8 @@ The repository contains screenshot evidence showing the execution of each requir
 
 ### Error case screenshot
 
+> `E.png` demonstrates that invalid operations are rejected with clear exception-handling messages (duplicate IDs, unknown departments, invalid salaries, and missing records) and that no bad data is saved.
+
 <div align="center">
   <img src="screenshots/E.png" alt="Error case summary" width="900" />
 </div>
@@ -202,8 +216,8 @@ The repository contains screenshot evidence showing the execution of each requir
 This assignment is completed by exactly two students. Both students must contribute to the design, implementation, testing, and final presentation. During the presentation, each student should be able to explain the application logic, the database structure, and the major PL/SQL concepts used.
 
 ## 11. Final Checklist
-- [ ] Group members' names and student IDs filled in
-- [ ] Repository renamed correctly
+- [x] Group members' names and student IDs filled in
+- [x] Repository renamed correctly
 - [ ] Database schema created successfully
 - [ ] Sample data inserted correctly
 - [ ] Records and collections implemented
@@ -212,7 +226,7 @@ This assignment is completed by exactly two students. Both students must contrib
 - [ ] Procedures and functions implemented
 - [ ] Exception handling included throughout
 - [ ] Test scripts for success and error scenarios completed
-- [ ] Screenshots captured and stored in `screenshots/`
+- [x] Screenshots captured and stored in `screenshots/`
 - [ ] Documentation reviewed and presentation prepared
 
 ## 12. AI Assistance Disclosure
