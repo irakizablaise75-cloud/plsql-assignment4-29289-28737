@@ -180,28 +180,58 @@ The repository contains screenshot evidence showing the execution of each requir
 | `T8.png` | Transfer employee | Employee moved to the new department |
 | `T9.png` | Delete employee | Deletion message and remaining count |
 
+**T1 - `fn_get_annual_salary`**
+
 <div align="center">
-  <table>
-    <tr>
-      <td><img src="screenshots/T1.png" alt="T1 success case" width="420" /></td>
-      <td><img src="screenshots/T2.png" alt="T2 success case" width="420" /></td>
-    </tr>
-    <tr>
-      <td><img src="screenshots/T3.png" alt="T3 success case" width="420" /></td>
-      <td><img src="screenshots/T4.png" alt="T4 success case" width="420" /></td>
-    </tr>
-    <tr>
-      <td><img src="screenshots/T5.png" alt="T5 success case" width="420" /></td>
-      <td><img src="screenshots/T6.png" alt="T6 success case" width="420" /></td>
-    </tr>
-    <tr>
-      <td><img src="screenshots/T7.png" alt="T7 success case" width="420" /></td>
-      <td><img src="screenshots/T8.png" alt="T8 success case" width="420" /></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><img src="screenshots/T9.png" alt="T9 success case" width="420" /></td>
-    </tr>
-  </table>
+  <img src="screenshots/T1.png" alt="T1 success case" width="900" />
+</div>
+
+**T2 - Years of service + department total**
+
+<div align="center">
+  <img src="screenshots/T2.png" alt="T2 success case" width="900" />
+</div>
+
+**T3 - Employee lookup by name**
+
+<div align="center">
+  <img src="screenshots/T3.png" alt="T3 success case" width="900" />
+</div>
+
+**T4 - Hire employee**
+
+<div align="center">
+  <img src="screenshots/T4.png" alt="T4 success case" width="900" />
+</div>
+
+**T5 - Department raise + audit**
+
+<div align="center">
+  <img src="screenshots/T5.png" alt="T5 success case" width="900" />
+</div>
+
+**T6 - Bulk adjustment**
+
+<div align="center">
+  <img src="screenshots/T6.png" alt="T6 success case" width="900" />
+</div>
+
+**T7 - Department roster report**
+
+<div align="center">
+  <img src="screenshots/T7.png" alt="T7 success case" width="900" />
+</div>
+
+**T8 - Transfer employee**
+
+<div align="center">
+  <img src="screenshots/T8.png" alt="T8 success case" width="900" />
+</div>
+
+**T9 - Delete employee**
+
+<div align="center">
+  <img src="screenshots/T9.png" alt="T9 success case" width="900" />
 </div>
 
 ### Error case screenshot
